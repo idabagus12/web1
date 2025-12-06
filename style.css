@@ -1,56 +1,101 @@
+/* Soft romantic theme */
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #ffb6c1, #ffe4e1);
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9eb5, #ffd6e2);
+    color: #444;
     text-align: center;
-    padding: 20px;
+    margin: 0;
+    padding: 30px 15px;
+    animation: fadeIn 1.5s ease;
 }
 
+/* Floating container card */
 .container {
     max-width: 600px;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.25);
+    backdrop-filter: blur(8px);
+    animation: floatUp 1.2s ease-out;
 }
 
+/* Cute title styling */
 h1 {
-    color: #ff69b4;
-    font-size: 2em;
+    color: #ff5f9e;
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 8px rgba(255, 120, 170, 0.4);
 }
 
+/* Soft elegant text */
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Smooth photo styling */
 .photo {
     width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
+    max-width: 420px;
+    border-radius: 15px;
     margin: 20px 0;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease;
 }
 
+.photo:hover {
+    transform: scale(1.03);
+}
+
+/* YouTube iframe styling */
 iframe {
     width: 100%;
     max-width: 560px;
     height: 315px;
-    border-radius: 10px;
-    margin: 15px 0;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 8px 20px rgba(255, 120, 170, 0.3);
 }
 
+/* Cute glowing button */
 button {
-    background: #ff69b4;
+    background: linear-gradient(135deg, #ff6fb5, #ff92d0);
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 25px;
+    border-radius: 30px;
     cursor: pointer;
     font-size: 1.2em;
+    font-weight: 600;
+    box-shadow: 0 6px 15px rgba(255, 105, 180, 0.3);
+    transition: all 0.25s ease;
 }
 
 button:hover {
-    background: #ff1493;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(255, 105, 180, 0.5);
 }
 
+/* Surprise text animation */
 #surprise {
     margin-top: 20px;
-    font-size: 1.5em;
-    color: #ff4500;
+    font-size: 1.6em;
+    color: #ff4081;
+    font-weight: 700;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes floatUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
